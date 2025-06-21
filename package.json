@@ -1,0 +1,25 @@
+{
+  "name": "romaric-vxr-support-for-vscode",
+  "displayName": ".vxr support for vscode",
+  "description": "Syntax highlighter for .vxr files.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "vxr",
+      "aliases": ["VideoXRay", "vxr"],
+      "extensions": [".vxr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "vxr",
+      "scopeName": "source.vxr",
+      "path": "./syntaxes/vxr.tmLanguage.json"
+    }]
+  }
+}

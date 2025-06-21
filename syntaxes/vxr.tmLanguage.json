@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "VideoXRay",
+	  "patterns": [
+    {
+      "name": "constant.numeric.timestamp.vxr",
+      "match": "\\[\\d{2}\\.\\d{2}\\.\\d{2}\\]"
+    },
+    {
+      "name": "constant.numeric.key.vxr",
+      "match": "\\b\\d+\\b(?=\\s*:)"
+    },
+    {
+      "name": "entity.name.key.vxr",
+      "match": "\\b(name|picture)\\b"
+    },
+    {
+      "name": "string.quoted.double.vxr",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "punctuation.section.block.vxr",
+      "match": "[{}:]"
+    },
+    {
+      "name": "text.whitespace.vxr",
+      "match": "\\s+"
+    }
+  	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.vxr",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.vxr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vxr",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.vxr"
+}
