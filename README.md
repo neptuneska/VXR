@@ -1,4 +1,4 @@
-# VideoPlayerXray Syntax Highlighter for VSCode
+# VideoXray Syntax Highlighter for VSCode
 
 This extension provides syntax highlighting support for `.vxr` files, used for annotating actors and timestamps in video files.
 
